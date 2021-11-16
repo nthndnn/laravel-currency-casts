@@ -1,0 +1,34 @@
+{
+    "name": "nathandunn/laravel-currency-casts",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nathan Dunn",
+            "email": "github@nathandunn.uk",
+            "role": "Developer",
+            "homepage": "https://nathandunn.uk"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.0",
+        "illuminate/support": "^8.0",
+        "illuminate/database": "^8.0",
+        "brick/money": "^0.5.3"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "NathanDunn\\CurrencyCasts\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NathanDunn\\Countries\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
