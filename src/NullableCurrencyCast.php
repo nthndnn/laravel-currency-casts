@@ -20,7 +20,7 @@ class NullableCurrencyCast extends CurrencyCast
      */
     public function get($model, $key, $value, $attributes)
     {
-        if ($value === null) {
+        if (null === $value) {
             return null;
         }
 
