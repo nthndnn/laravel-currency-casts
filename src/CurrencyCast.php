@@ -4,6 +4,7 @@ namespace NathanDunn\CurrencyCasts;
 
 use Brick\Money\Exception\UnknownCurrencyException;
 use Brick\Money\Money;
+use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Illuminate\Support\Arr;
@@ -38,9 +39,14 @@ class CurrencyCast implements CastsAttributes
      * @param Money|null $value
      * @param array $attributes
      * @return string
+     * @throws Exception
      */
     public function set($model, $key, $value, $attributes)
     {
+        if (!$value instanceof Money) {
+            throw new Exception(sprintf('Property %s must be an instance of %s', $key, Money::class));
+        }
+
         return json_encode([
             'currency' => $value->getCurrency()->getCurrencyCode(),
             'amount' => $value->getMinorAmount()->toInt(),
