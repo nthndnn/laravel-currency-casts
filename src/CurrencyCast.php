@@ -23,7 +23,7 @@ class CurrencyCast implements CastsAttributes
      */
     public function get($model, $key, $value, $attributes)
     {
-        $data = json_decode($value);
+        $data = json_decode($value, true);
 
         return Money::ofMinor(
             Arr::get($data, 'amount'), 
