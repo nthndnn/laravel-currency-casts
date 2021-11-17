@@ -7,7 +7,7 @@ use Brick\Money\Money;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 
-class NullableCurrencyCast extends CurrencyCast
+class NullCurrencyCast extends CurrencyCast
 {
     /**
      * Cast the given value.
