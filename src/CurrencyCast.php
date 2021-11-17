@@ -36,7 +36,7 @@ class CurrencyCast implements CastsAttributes
      *
      * @param Model $model
      * @param string $key
-     * @param Money|null $value
+     * @param Money $value
      * @param array $attributes
      * @return string
      * @throws Exception

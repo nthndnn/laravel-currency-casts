@@ -4,6 +4,7 @@ namespace NathanDunn\CurrencyCasts;
 
 use Brick\Money\Exception\UnknownCurrencyException;
 use Brick\Money\Money;
+use Exception;
 use Illuminate\Database\Eloquent\Model;
 
 class NullableCurrencyCast extends CurrencyCast
@@ -35,6 +36,7 @@ class NullableCurrencyCast extends CurrencyCast
      * @param Money|null $value
      * @param array $attributes
      * @return string|null
+     * @throws Exception
      */
     public function set($model, $key, $value, $attributes)
     {
